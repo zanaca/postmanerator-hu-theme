@@ -38,6 +38,16 @@ hr {margin: 0; width: 55%};
 p {
     color: #808080;
 }
+p, strong, small, code {
+    word-break: break-word;
+}
+
+.markdown-description *[class^="hljs"]  {
+    background-color: #efefef;
+    color: #555;
+}
+
+
 h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
     color: #a5a5a5;
     display: initial;

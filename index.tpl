@@ -42,9 +42,9 @@
                     </div>
                 </div>
 
-
-
+                <div class="col-lg-7">
                 {{ markdown .Description }}
+                </div>
 
                 {{ with $structures := .Structures }}
                 <h2 id="doc-api-structures">
