@@ -1,7 +1,8 @@
 <div class="scrollspy">
+    <h4 class="text-center"><span class="label label-primary text-uppercase">{{ .Name }}</span></h4>
     <ul id="main-menu" data-spy="affix" class="nav">
         <li>
-            <a href="#doc-general-notes">{{ .Name }}</a>
+            <a href="#doc-general-notes"><span class="glyphicon glyphicon-home"></span> Start</a>
         </li>
         {{ with $structures := .Structures }}
         <li>
@@ -20,13 +21,13 @@
         </li>
         {{ range .Folders }}
         <li>
-            <span class="glyphicon glyphicon-folder-close"> <a href="#folder-{{ slugify .Name }}">{{ .Name }}</a>
+             <a href="#folder-{{ slugify .Name }}"><span class="icon glyphicon glyphicon-collapse-down"></span><span class="glyphicon glyphicon-collapse-up"></span> {{ .Name }}</a>
             <ul>
                 {{ range .Order }}
 
                 {{ with $req := findRequest $.Requests . }}
                 <li>
-                    <a href="#request-{{ slugify $req.Name }}">{{ $req.Name }}</a>
+                    <a href="#request-{{ slugify $req.Name }}"><small class="strong {{ $req.Method }}">{{ $req.Method }}</small> {{ $req.Name }}</a>
                 </li>
                 {{ end }}
 
@@ -34,5 +35,9 @@
             </ul>
         </li>
         {{ end }}
+        <li style="bottom:0;position:fixed;">
+            <a><small class="GET">Last update:  <script>document.write(document.lastModified)</script></small></a>
+        </li>
+
     </ul>
 </div>
