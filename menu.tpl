@@ -35,9 +35,5 @@
             </ul>
         </li>
         {{ end }}
-        <li style="bottom:0;position:fixed;">
-            <a><small class="GET">Last update:  <script>document.write(document.lastModified)</script></small></a>
-        </li>
-
     </ul>
 </div>
