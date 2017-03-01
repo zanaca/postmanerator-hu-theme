@@ -17,8 +17,6 @@ h1 {
 
 h1, h2, h3, h4 {
     color: #505050;
-    text-shadow: 1px 1px 5em #848474;
-
 }
 
 h2:after {
@@ -78,8 +76,16 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
     padding-top: 8px;
 }
 
-.table {
-    margin-bottom: 8px;
+table {
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+
+td {
+    padding: 5px;
+}
+tr:nth-child(even) {
+    background-color : rgba(0, 0, 0, 0.05);
 }
 
 .clear {
@@ -106,10 +112,13 @@ pre code {
     font-weight: normal;
 }
 .request {
-    margin-top: 12px;
+    margin-top: 50px;
     margin-bottom: 24px;
 }
 
+.endpoints-group {
+    margin-top: 100px;
+}
 .response-text-sample {
     padding: 0px !important;
 }
@@ -201,7 +210,13 @@ pre code {
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px 15px 15px 250px;
+    padding: 15px;
+}
+
+@media (min-width:768px) {
+    #page-content-wrapper {
+        padding-left:250px;
+    }
 }
 
 .markdown H3,  .markdown H2, .markdown H1 {
@@ -235,9 +250,12 @@ pre:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.splitted {
-    background: linear-gradient(90deg, transparent 65%, #3c3c33 35%);
+@media (min-width:768px) {
+    .splitted {
+        background: linear-gradient(90deg, transparent 65%, #3c3c33 35%);
+    }
 }
+
 .main-title {
     white-space: normal;
     display: inline-block;
