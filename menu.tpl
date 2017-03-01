@@ -1,5 +1,5 @@
 <div class="scrollspy">
-    <h4 class="text-center"><span class="label label-primary text-uppercase">{{ .Name }}</span></h4>
+    <h4 class="text-center"><span class="main-title label label-primary text-uppercase">{{ .Name }}</span></h4>
     <ul id="main-menu" data-spy="affix" class="nav">
         <li>
             <a href="#doc-general-notes"><span class="glyphicon glyphicon-home"></span> Start</a>

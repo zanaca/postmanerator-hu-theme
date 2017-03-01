@@ -20,8 +20,8 @@
 <div id="page-content-wrapper" class="splitted">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
+            <div class="col-md-12">
+                <div class="row ">
                     <div class="col-md-7">
                         <h1 id="doc-general-notes">
                             {{ .Name }}
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7">
+                <div class="col-md-7 doc no-padding">
                 {{ markdown .Description }}
                 </div>
 
@@ -85,7 +85,7 @@
                     </h3>
                     <hr class="clear">
 
-                    <div>{{ markdown .Description }}</div>
+                    <div class="col-md-7 doc no-padding">{{ markdown .Description }}</div>
 
                     {{ range .Order }}
 
@@ -97,7 +97,7 @@
                                 <a href="#request-{{ slugify $req.Name }}"><i class="glyphicon glyphicon-link"></i></a>
                             </h4>
                             <input class="bg-warning form-control" disabled value="{{ $req.URL}}" style="width:95%">
-                            <span class="markdown-description">
+                            <span class="markdown">
                                 {{ markdown $req.Description }}
                             </span>
                             <hr class="clear">
@@ -127,7 +127,7 @@
                                             {{ end }}
                                             {{ if hasContent $res.Text }}
                                                 {{ with $example := indentJSON $res.Text }}
-                                                <tr><td class="response-text-sample" colspan="2">
+                                                <tr><td class="doc response-text-sample" colspan="2">
                                                     <pre><code>{{ $example }}</code></pre>
                                                 </td></tr>
                                                 {{ end }}
@@ -138,6 +138,7 @@
                                 </div>
                             </div>
                             {{ end }}
+                                {{ if  $req.Headers }}
                                 <h6 class="text-uppercase ">Headers</h6>
                                 <div class="param row">
                                     {{ range $req.Headers }}
@@ -145,7 +146,16 @@
                                     <div class="value col-md-9">{{ .Value }}</div>
                                     {{ end }}
                                 </div>
-                            <br><br><br><br><br><br>
+                                {{ end }}
+
+                                {{ if $req.Data }}
+                                <h6 class="text-uppercase ">Body</h6>
+                                <div class="param row">
+                                    {{ $req.Data }}
+                                </div>
+                                {{ end }}
+
+                            <br><br><br><br>
                             </div>
 
                             <div class="col-md-5">

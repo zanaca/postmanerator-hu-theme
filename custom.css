@@ -6,17 +6,19 @@ body {
     line-height: 1.5;
     transition: linear left 0.1s;
     background-color: #fefefd;
+    color: #808080;
 }
 
 h1 {
     margin-top: 5px;
-    text-shadow: 1px 1px 5em #848474;
+    text-shadow: 1px 1px 3em #848474;
+    font-weight: bold;
 }
 
 h1, h2, h3, h4 {
     color: #505050;
     text-shadow: 1px 1px 5em #848474;
-    font-weight: bold;
+
 }
 
 h2:after {
@@ -33,18 +35,28 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     margin-left: 8px;
 }
 
-hr {margin: 0; width: 55%};
-
-p {
-    color: #808080;
+hr {
+    margin: 0; width: 55%
 }
+
 p, strong, small, code {
-    word-break: break-word;
+    word-break: break-word !important;
 }
 
-.markdown-description *[class^="hljs"]  {
-    background-color: #efefef;
-    color: #555;
+IMG {
+    max-width: 100%;
+}
+.markdown {
+    max-width: 610px;
+    display: inline-block;
+}
+.markdown pre, .doc pre {
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+}
+.markdown *[class*="hljs"], .doc code[class*="hljs"], .doc pre *[class*="hljs"] {
+    background-color: #FAFAFA;
+    color: #808080;
 }
 
 
@@ -53,8 +65,8 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
     display: initial;
 }
 
-.col-lg-12 {
-    padding-left: 3em;
+.col-md-12 {
+    padding-left: 2em;
 }
 
 .nav.nav-tabs > li > a {
@@ -74,13 +86,20 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
     clear:both;
 }
 
+
+table pre {
+    max-width: 600px;
+}
 pre {
+    max-width: 610px;
     border-radius: 0px;
     border: none;
 }
 
 pre code {
     margin: -9.5px;
+    font-family: "Courier", sans-serif;
+
 }
 
 #doc-general-notes {
@@ -185,7 +204,7 @@ pre code {
     padding: 15px 15px 15px 250px;
 }
 
-.markdown-description H3,  .markdown-description H2, .markdown-description H1 {
+.markdown H3,  .markdown H2, .markdown H1 {
     text-transform: uppercase;
     font-size: 100%;
 }
@@ -211,7 +230,11 @@ pre {
 }
 
 .splitted {
-    background: linear-gradient(90deg, transparent 66%, #3c3c33 44%);
+    background: linear-gradient(90deg, transparent 65%, #3c3c33 35%);
+}
+.main-title {
+    white-space: normal;
+    display: inline-block;
 }
 
 .GET {
@@ -228,3 +251,8 @@ pre {
 
 .DELETE {
   color: #ed4b48; }
+
+
+.no-padding  {
+      padding-left: 0 !important;
+}
