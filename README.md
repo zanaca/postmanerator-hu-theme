@@ -15,4 +15,4 @@ postmanerator -output="/tmp/doc.html"" -collection="collection.json" -theme=hu
 You can print directly from the served html.
 
 ## Preview
-![Preview](preview.jpg)
+![Preview](assets/preview.jpg)
