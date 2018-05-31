@@ -15,7 +15,10 @@ h1 {
     font-weight: bold;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: #505050;
 }
 
@@ -27,38 +30,57 @@ h5 {
     font-weight: bold;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
     display: none;
     position: absolute;
     margin-left: 8px;
 }
 
 hr {
-    margin: 0; width: 55%
+    margin: 0;
+    width: 55%
 }
 
-p, strong, small, code {
+p,
+strong,
+small,
+code {
     word-break: break-word !important;
 }
 
 IMG {
     max-width: 100%;
 }
+
 .markdown {
     max-width: 610px;
     display: inline-block;
 }
-.markdown pre, .doc pre {
+
+.markdown pre,
+.doc pre {
     border-radius: 3px;
     border: 1px solid #e6e6e6;
 }
-.markdown *[class*="hljs"], .doc code[class*="hljs"], .doc pre *[class*="hljs"] {
+
+.markdown *[class*="hljs"],
+.doc code[class*="hljs"],
+.doc pre *[class*="hljs"] {
     background-color: #FAFAFA;
     color: #808080;
 }
 
-
-h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
+h6:hover a {
     color: #a5a5a5;
     display: initial;
 }
@@ -67,7 +89,7 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
     padding-left: 2em;
 }
 
-.nav.nav-tabs > li > a {
+.nav.nav-tabs>li>a {
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -84,18 +106,19 @@ table {
 td {
     padding: 5px;
 }
+
 tr:nth-child(even) {
-    background-color : rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .clear {
-    clear:both;
+    clear: both;
 }
-
 
 table pre {
     max-width: 600px;
 }
+
 pre {
     max-width: 610px;
     border-radius: 0px;
@@ -105,12 +128,12 @@ pre {
 pre code {
     margin: -9.5px;
     font-family: "Courier", sans-serif;
-
 }
 
 #doc-general-notes {
     font-weight: normal;
 }
+
 .request {
     margin-top: 50px;
     margin-bottom: 24px;
@@ -119,6 +142,7 @@ pre code {
 .endpoints-group {
     margin-top: 100px;
 }
+
 .response-text-sample {
     padding: 0px !important;
 }
@@ -126,7 +150,6 @@ pre code {
 .response-text-sample pre {
     margin-bottom: 0px;
 }
-
 
 #sidebar-wrapper {
     z-index: 1000;
@@ -163,7 +186,7 @@ pre code {
 }
 
 #sidebar-wrapper .icon {
-    color:#b3b3b3;
+    color: #b3b3b3;
 }
 
 #sidebar-wrapper .glyphicon-collapse-up {
@@ -193,7 +216,7 @@ pre code {
     border-right: solid 1px #efefef;
 }
 
-#sidebar-wrapper ul li.active > a {
+#sidebar-wrapper ul li.active>a {
     color: #efefef;
     border-right: solid 3px #efefef;
 }
@@ -215,16 +238,19 @@ pre code {
 
 @media (min-width:768px) {
     #page-content-wrapper {
-        padding-left:250px;
+        padding-left: 250px;
     }
 }
 
-.markdown H3,  .markdown H2, .markdown H1 {
+.markdown H3,
+.markdown H2,
+.markdown H1 {
     text-transform: uppercase;
     font-size: 100%;
 }
 
-.panel-body, .tab-content {
+.panel-body,
+.tab-content {
     padding: 0px;
 }
 
@@ -233,14 +259,15 @@ pre code {
     border-color: #444;
 }
 
-.panel-dark > .panel-heading {
+.panel-dark>.panel-heading {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #444;
     padding: 4px 8px;
 }
 
-.markdown pre, .doc pre {
+.markdown pre,
+.doc pre {
     margin: 0px;
     min-height: 50px;
     max-height: 250px;
@@ -250,9 +277,34 @@ pre:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width:768px) {
+
+@media (min-width: 768px) {
+    .splitted {
+        background: linear-gradient(90deg, transparent 63%, #3c3c33 35%);
+    }
+}
+
+@media (min-width: 2000px) {
+    .splitted {
+        background: linear-gradient(90deg, transparent 61vw, #3c3c33 35%);
+    }
+}
+
+@media (max-width: 1440px) {
     .splitted {
         background: linear-gradient(90deg, transparent 65%, #3c3c33 35%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .splitted {
+        background: linear-gradient(90deg, transparent 67%, #3c3c33 35%);
+    }
+}
+
+@media (max-width: 1000px) {
+    .splitted {
+        background: white;
     }
 }
 
@@ -262,21 +314,25 @@ pre:hover {
 }
 
 .GET {
-  color: #3eb63e; }
+    color: #3eb63e;
+}
 
 .POST {
-  color: #f5a623; }
+    color: #f5a623;
+}
 
 .PATCH {
-  color: #666666; }
+    color: #666666;
+}
 
 .PUT {
-  color: #4a90e2; }
+    color: #4a90e2;
+}
 
 .DELETE {
-  color: #ed4b48; }
+    color: #ed4b48;
+}
 
-
-.no-padding  {
-      padding-left: 0 !important;
+.no-padding {
+    padding-left: 0 !important;
 }
