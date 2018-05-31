@@ -5,14 +5,14 @@ This theme has been updated to support the [v0.8.0](https://github.com/aubm/post
 
 ## Table of Contents
 
-* [Preview](#preview)
 * [Running](#running)
-
-## Preview
-![Preview](preview.jpg)
+* [Preview](#preview)
 
 ## Running
 ```sh
 postmanerator -output="/tmp/doc.html"" -collection="collection.json" -theme=hu
 ```
 You can print directly from the served html.
+
+## Preview
+![Preview](preview.jpg)
