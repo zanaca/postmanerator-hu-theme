@@ -1,8 +1,11 @@
 <div class="scrollspy">
-    <h4 class="text-center"><span class="main-title label label-primary text-uppercase">{{ .Name }}</span></h4>
+    <h4 class="text-center">
+        <span class="main-title label label-primary text-uppercase">{{ .Name }}</span>
+    </h4>
     <ul id="main-menu" data-spy="affix" class="nav">
         <li>
-            <a href="#doc-general-notes"><span class="glyphicon glyphicon-home"></span> Start</a>
+            <a href="#doc-general-notes">
+                <span class="glyphicon glyphicon-home"></span> Start</a>
         </li>
         {{ with $structures := .Structures }}
         <li>
@@ -19,18 +22,18 @@
         <li>
             <a href="#doc-api-detail">API detail</a>
         </li>
-        {{ range .Folders }}
+        {{ range .Folders }} {{ $folder := . }}
         <li>
-             <a href="#folder-{{ slugify .Name }}"><span class="icon glyphicon glyphicon-collapse-down"></span><span class="glyphicon glyphicon-collapse-up"></span> {{ .Name }}</a>
+            <a href="#folder-{{ slugify $folder.Name }}">
+                <span class="icon glyphicon glyphicon-collapse-down"></span>
+                <span class="glyphicon glyphicon-collapse-up"></span> {{ $folder.Name }}</a>
             <ul>
-                {{ range .Order }}
+                {{ range $folder.Requests }} {{ $req := . }}
 
-                {{ with $req := findRequest $.Requests . }}
                 <li>
-                    <a href="#request-{{ slugify $req.Name }}"><small class="strong {{ $req.Method }}">{{ $req.Method }}</small> {{ $req.Name }}</a>
+                    <a href="#request-{{ slugify $req.Name }}">
+                        <small class="strong {{ $req.Method }}">{{ $req.Method }}</small> {{ $req.Name }}</a>
                 </li>
-                {{ end }}
-
                 {{ end }}
             </ul>
         </li>
